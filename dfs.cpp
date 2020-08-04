@@ -5,9 +5,9 @@ using namespace std;
 void dfsUtilConnectedComponent(vector<int> g[], int i, bool vis[])
 {
     vis[i]=true;
-    for(auto it=g[i].begin();it!=g[i].end();it++)
-        if(!vis[*it])
-            dfsUtilConnectedComponent(g,*it,vis);
+    for(auto v:g[i])
+        if(!vis[v])
+            dfsUtilConnectedComponent(g,v,vis);
 }
 
 
